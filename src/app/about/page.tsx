@@ -49,7 +49,7 @@ const items: MenuItem[] = [
     },
 ];
 
-const About: React.FC = () => {
+export default function About() {
 
     const [data, setData] = useState<string>("")
     const [collapsed, setCollapsed] = useState(true);
@@ -68,7 +68,7 @@ const About: React.FC = () => {
             <header className={`${data} w-full p-2 h-fit`}>
                 <Button
                     onClick={toggleCollapsed}
-                    className="mb-10"
+                    className=""
                 >
                     {collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
                 </Button>
@@ -84,4 +84,4 @@ const About: React.FC = () => {
         </div>
     )
 }
-export default About
+

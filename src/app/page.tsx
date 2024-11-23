@@ -7,11 +7,11 @@ export default function Home() {
     const items = [
         {
             name: "blue",
-            backgroundColor: "bg-blue-300"
+            backgroundColor: "bg-blue-400"
         },
         {
             name: "red",
-            backgroundColor: "bg-red-300"
+            backgroundColor: "bg-red-500"
         },
         {
             name: "yellow",
