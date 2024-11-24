@@ -1,8 +1,6 @@
 'use client'
 
 
-import { Button } from "antd";
-
 export default function Home() {
     const items = [
         {
@@ -23,19 +21,18 @@ export default function Home() {
         localStorage.setItem("color", JSON.stringify(data))
     }
     return (
-        <section className="">
-            <h1>home</h1>
+        <section className="w-full max-w-7xl mx-auto my-10">
             <form className="w-full flex flex-col max-w-sm mx-auto border rounded gap-2 p-8">
                 {
-                    items.map((item, index) => <Button
+                    items.map((item, index) => <a
                         type="button"
                         onClick={() => handleNavigate(item.backgroundColor)}
-                        className={`${item.backgroundColor} w-32 min-w-fit mx-auto`}
+                        className={`${item.backgroundColor} w-32 min-w-fit mx-auto rounded-md p-2 text-center`}
                         key={index}
                         href="/about"
                     >
                         {item.name}
-                    </Button>)
+                    </a>)
                 }
             </form>
         </section>
